@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# TODO: Modify these paths and the eval file paths below to run wmt + news_sum
-# and twitter + poli_aff time vector analogy sweeps.
+# TODO: Modify these and possibly thethe evaluation file paths below to run
+# wmt + news_sum and twitter + poli_aff time vector analogy sweeps.
 news_sum_eval_dir = ""
 poli_aff_eval_dir = ""
 
@@ -81,6 +81,7 @@ then
                         $LORA_PHRASE
 
                     # Run NewsSum evaluation
+                    # TODO: update if needed
                     eval_file="${news_sum_eval_dir}${eval_year}"
                     python -u ../finetuning_scripts/finetune_t5_summarization.py \
                             --model_name_or_path ${vec_out_dir}${PRETRAINED_MODEL}_2012_news_sum_wmt_analogy_${ALPHA1}_${ALPHA2}_${ALPHA3} \
@@ -163,6 +164,7 @@ then
                         $LORA_PHRASE
 
                     # Run NewsSum evaluation
+                    # TODO: update if needed
                     eval_file="${poli_aff_eval_dir}${eval_year}"
                     python -u ../finetuning_scripts/finetune_t5.py  \
                         --model_name_or_path ${vec_out_dir}${PRETRAINED_MODEL}_2015_poli_aff_twitter_analogy_${ALPHA1}_${ALPHA2}_${ALPHA3} \

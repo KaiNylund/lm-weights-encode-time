@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # TODO: Modify poli_aff path and the train file path below to finetune on PoliAff 
-# task from "time waits for no one!" (Luu et al., 2021)
+# task from "time waits for no one!" (Luu et al., 2022)
 poli_aff_train_dir=""
 
 SEED=42

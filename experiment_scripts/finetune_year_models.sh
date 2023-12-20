@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # TODO: Modify these paths and the train file paths below to finetune on tasks
-# from "time waits for no one!" (Luu et al., 2021)
+# from "time waits for no one!" (Luu et al., 2022)
 news_sum_train_dir=""
 news_cls_train_dir=""
 poli_aff_train_dir=""

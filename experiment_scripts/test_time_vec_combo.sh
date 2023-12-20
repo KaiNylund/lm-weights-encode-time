@@ -1,5 +1,4 @@
 #!/bin/bash
-# important! make sure to set num_tasks_per_node to 1!
 
 SEED=42
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # TODO: Modify these paths and the test file paths below to evaluate on tasks
-# from "time waits for no one!" (Luu et al., 2021)
+# from "time waits for no one!" (Luu et al., 2022)
 news_sum_eval_dir=""
 news_cls_eval_dir=""
 poli_aff_eval_dir=""
