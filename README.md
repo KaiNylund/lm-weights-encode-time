@@ -36,7 +36,7 @@ We also provide GPT2-small and XGLM-564M finetuned on yearly and monthly english
 
 ## Reproducing Experiments
 
-We provide scripts to reproduce individual experiments from the paper in [experiment_scripts](./experiment_scripts/) on a single GPU, and [a file with usage examples](./reproduce_all_results.sh).Unfortunately, because we do not directly release the downstream task datasets, running most fils will require downloading an external dataset and then updating paths to training or evaluation files.
+We provide scripts to reproduce individual experiments from the paper in [experiment_scripts](./experiment_scripts/) on a single GPU, and [a file with usage examples](./reproduce_all_results.sh). Unfortunately, because we do not directly release the downstream task datasets, running most files will require downloading an external dataset and then updating paths to training or evaluation files.
 
 For example, to reproduce the T5-small task analogy experiments for NewsSum + WMT LM:
 1. Install the conda environment with ``conda env create -f environment.yml``
