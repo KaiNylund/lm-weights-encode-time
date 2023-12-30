@@ -44,4 +44,4 @@ For example, to reproduce the T5-small task analogy experiments for NewsSum + WM
 3. Update the lines ``news_sum_eval_dir = ""`` and ``eval_file="${news_sum_eval_dir}${eval_year}"`` in [time_vec_analogies.sh](./experiment_scripts/time_vec_analogies.sh)
 4. Run ``bash ./experiment_scripts/time_vec_analogies.sh``
 
-Due to the large number of evaluations (particularly for the monthly decay heatmap and time vector analogy alpha sweeps), we reccomend running experiments in paralell. As a starting point, we provide our unorganized slurm scripts in [misc_slurm_jobs](./misc_slurm_jobs/), although using these will require updating the file structure and slurm account information in [slurm_constants.py](./misc_slurm_jobs/slurm_constants.py).
+Due to the large number of evaluations (particularly for the monthly decay heatmap and time vector analogy alpha sweeps), we recommend running experiments in paralell. As a starting point, we provide our unorganized slurm scripts in [misc_slurm_jobs](./misc_slurm_jobs/), although using these will require updating the file structure and slurm account information in [slurm_constants.py](./misc_slurm_jobs/slurm_constants.py).
