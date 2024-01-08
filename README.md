@@ -45,3 +45,14 @@ For example, to reproduce the T5-small task analogy experiments for NewsSum + WM
 4. Run ``bash ./experiment_scripts/time_vec_analogies.sh``
 
 Due to the large number of evaluations (particularly for the monthly decay heatmap and time vector analogy alpha sweeps), we recommend running experiments in paralell. As a starting point, we provide our unorganized slurm scripts in [misc_slurm_jobs](./misc_slurm_jobs/), although using these will require updating the file structure and slurm account information in [slurm_constants.py](./misc_slurm_jobs/slurm_constants.py).
+
+## Reference
+
+```
+@article{nylund2023time,
+  title={Time is Encoded in the Weights of Finetuned Language Models},
+  author={Nylund, Kai and Gururangan, Suchin and Smith, Noah A},
+  journal={arXiv preprint arXiv:2312.13401},
+  year={2023}
+}
+```
