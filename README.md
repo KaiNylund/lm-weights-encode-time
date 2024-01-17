@@ -1,5 +1,7 @@
 # Time is Encoded in the Weights of Finetuned Language Models
 
+[Link to preprint](https://arxiv.org/abs/2312.13401)
+
 We release three language modeling datasets, over 500 time-specific models, and scripts for reproducing the main paper results.
 
 ## Data
