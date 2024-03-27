@@ -39,7 +39,7 @@ for year in tqdm(range(2012, 2014)):
         else:
             print(f"Missing {year}_{month} model, using duplicate prev model")
             task_vecs.append(prev_added_model)
-            
+
 
 month_param_to_fit = defaultdict(dict)
 losses = []
