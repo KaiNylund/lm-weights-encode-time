@@ -7,9 +7,9 @@ poli_aff_eval_dir = ""
 
 SEED=42
 PRETRAINED_MODEL=$1
-ALPHA1S=(0.6 0.8 1.0 1.2 1.4 1.6 1.8 2.0 2.2)
+ALPHA1S=(0.1 0.2 0.3 0.4 0.5 0.6)
 ALPHA2S=(0.1 0.2 0.3 0.4 0.5 0.6)
-ALPHA3S=(0.1 0.2 0.3 0.4 0.5 0.6)
+ALPHA3S=(0.6 0.8 1.0 1.2 1.4 1.6 1.8 2.0 2.2)
 
 eval_out_dir="${PRETRAINED_MODEL}_analogy_evals/"
 vec_out_dir="${PRETRAINED_MODEL}_vecs/"
@@ -54,7 +54,7 @@ then
 
         python -u ../task_vectors/get_task_vector.py \
             --path_to_pretrained_model $PRETRAINED_MODEL \
-            --path_to_finetuned_model $start_year_lm_model \
+            --path_to_finetuned_model $target_year_lm_model \
             --alpha 1.0 \
             --output_dir "${vec_out_dir}wmt_lm_${target_year}_vec" \
             $LORA_PHRASE
@@ -71,9 +71,9 @@ then
                     # Do task analogy with time vectors
                     python -u ../task_vectors/task_analogy.py \
                         --path_to_source_model $PRETRAINED_MODEL \
-                        --task_vector_C "${vec_out_dir}wmt_lm_2012_vec" \
+                        --task_vector_A "${vec_out_dir}wmt_lm_2012_vec" \
                         --task_vector_B "${vec_out_dir}wmt_lm_${target_year}_vec" \
-                        --task_vector_A "${vec_out_dir}news_sum_2012_vec" \
+                        --task_vector_C "${vec_out_dir}news_sum_2012_vec" \
                         --lambdaA $ALPHA1 \
                         --lambdaB $ALPHA2 \
                         --lambdaC $ALPHA3 \
@@ -137,7 +137,7 @@ then
 
         python -u ../task_vectors/get_task_vector.py \
             --path_to_pretrained_model $PRETRAINED_MODEL \
-            --path_to_finetuned_model $start_year_lm_model \
+            --path_to_finetuned_model $target_year_lm_model \
             --alpha 1.0 \
             --output_dir "${vec_out_dir}twitter_lm_${target_year}_vec" \
             $LORA_PHRASE
@@ -154,9 +154,9 @@ then
                     # Do task analogy with time vectors
                     python -u ../task_vectors/task_analogy.py \
                         --path_to_source_model $PRETRAINED_MODEL \
-                        --task_vector_C "${vec_out_dir}twitter_lm_2015_vec" \
+                        --task_vector_A "${vec_out_dir}twitter_lm_2015_vec" \
                         --task_vector_B "${vec_out_dir}twitter_lm_${target_year}_vec" \
-                        --task_vector_A "${vec_out_dir}poli_aff_2015_vec" \
+                        --task_vector_C "${vec_out_dir}poli_aff_2015_vec" \
                         --lambdaA $ALPHA1 \
                         --lambdaB $ALPHA2 \
                         --lambdaC $ALPHA3 \
