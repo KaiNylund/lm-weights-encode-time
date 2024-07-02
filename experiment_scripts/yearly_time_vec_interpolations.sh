@@ -2,8 +2,8 @@
 
 # TODO: Modify poli_aff path and the train file path below to finetune on PoliAff
 # task from "time waits for no one!" (Luu et al., 2022)
-news_sum_eval_dir = ""
-poli_aff_eval_dir = ""
+news_sum_eval_dir=""
+poli_aff_eval_dir=""
 
 SEED=42
 PRETRAINED_MODEL=$1
@@ -12,11 +12,11 @@ ALPHA2S=(1.0 0.9 0.8 0.7 0.6 0.5 0.4 0.3 0.2 0.1 0.0)
 
 eval_out_dir="${PRETRAINED_MODEL}_interp_evals/"
 vec_out_dir="${PRETRAINED_MODEL}_vecs/"
-if [ $PRETRAINED_MODEL == "t5-3b" ]; then
+if [[ $PRETRAINED_MODEL == "t5-3b" ]]; then
     LR=0.0002
     LORA_PHRASE="--lora"
     HF_MODEL="t5-3b"
-elif [ $PRETRAINED_MODEL == "t5-large" ]; then
+elif [[ $PRETRAINED_MODEL == "t5-large" ]]; then
     LR=0.0008
     LORA_PHRASE="--lora"
     HF_MODEL="t5-770M"
@@ -150,6 +150,7 @@ then
                     --save_steps 200 \
                     --save_strategy no \
                     --learning_rate $LR \
+                    --source_prefix 'summarize: ' \
                     --gradient_accumulation_steps 8 \
                     --ddp_find_unused_parameters False \
                     --per_device_train_batch_size 2 \

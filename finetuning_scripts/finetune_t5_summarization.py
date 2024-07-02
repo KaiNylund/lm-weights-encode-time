@@ -398,6 +398,7 @@ def main():
             extension = data_args.test_file.split(".")[-1]
         logger.info(str(data_files))
         raw_datasets = load_dataset(
+            "json",
             data_files=data_files,
             use_auth_token=True if model_args.use_auth_token else None,
         )

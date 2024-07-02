@@ -75,6 +75,7 @@ then
             --save_steps 200 \
             --save_strategy no \
             --learning_rate $LR \
+            --source_prefix 'summarize: ' \
             --gradient_accumulation_steps 8 \
             --ddp_find_unused_parameters False \
             --per_device_train_batch_size 2 \
