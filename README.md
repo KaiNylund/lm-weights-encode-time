@@ -17,9 +17,9 @@ We use the following processed downstream tasks from ["Time Waits for No One!" (
 
 To use the NewsSum and NewsCls tasks, first download the [Newsroom dataset](https://lil.nlp.cornell.edu/newsroom/index.html), then process with the script from the ["Time Waits for No One!" repo](https://github.com/Temporal-Misalignment/time-waits-for-no-one/blob/main/data/newsroom/newsroom_to_tempdrift.py).
 
-PoliAff text is omitted due to the Twitter License Agreement, but Luu et al. provide labels and tweet IDs in [their repo](https://github.com/Temporal-Misalignment/time-waits-for-no-one/tree/main).
+PoliAff text is omitted due to the Twitter License Agreement, but Luu et al. provide labels and tweet IDs in [their repo](https://github.com/Temporal-Misalignment/time-waits-for-no-one/tree/main). AIC splits are also available at [Luu et al.'s repo](https://github.com/Temporal-Misalignment/time-waits-for-no-one/tree/main).
 
-AIC splits are also available at [Luu et al.'s repo](https://github.com/Temporal-Misalignment/time-waits-for-no-one/tree/main).
+Please feel free to reach out if you are trying to reproduce our results but can't access the datasets.
 
 ## Models
 
