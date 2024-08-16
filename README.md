@@ -1,6 +1,6 @@
 # Time is Encoded in the Weights of Finetuned Language Models
 
-[Link to preprint](https://arxiv.org/abs/2312.13401)
+[Link to paper](https://aclanthology.org/2024.acl-long.141/)
 
 We release three language modeling datasets, over 500 time-specific models, and scripts for reproducing the main paper results.
 
@@ -51,10 +51,15 @@ Due to the large number of evaluations (particularly for the monthly decay heatm
 ## Reference
 
 ```
-@article{nylund2023time,
-  title={Time is Encoded in the Weights of Finetuned Language Models},
-  author={Nylund, Kai and Gururangan, Suchin and Smith, Noah A},
-  journal={arXiv preprint arXiv:2312.13401},
-  year={2023}
+@inproceedings{nylund-etal-2024-time,
+    title = "Time is Encoded in the Weights of Finetuned Language Models",
+    author = "Nylund, Kai and Gururangan, Suchin and Smith, Noah",
+    booktitle = "Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = aug,
+    year = "2024",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2024.acl-long.141",
+    pages = "2571--2587",
 }
+
 ```
